@@ -7,5 +7,4 @@ for letter in word:
 		if letter == vowel:
 			print(count)
 	
-	
 	count += 1			

@@ -1,11 +1,8 @@
-number = 16
+number = 2
+exponent = 3
+answer = 1
+for exponent in range(3):
+	answer *= number
 
-for divisor in range(1,number + 1):
-	power = number ** (1 / divisor)
-	for base in range(2,number+1):
-		if number % base == 0:
-			if type(power) != float:
-				print(count)
-				print(divisor)
-
+print(answer)
 			
