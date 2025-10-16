@@ -1,5 +1,5 @@
 let word = "EniIfE"
-let compare = word.toUpperCase()
+let compare = word.toLowerCase()
 
 let counter = 0;
 
