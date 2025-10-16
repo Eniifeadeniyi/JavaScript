@@ -2,8 +2,10 @@ input = 11
 
 answer = " "
 
-if input > 0:
-	for divisor in range(2,3):
-		input %= 2
-		answer += str(input) 
+count = 0
+while(input != 0) :
+	remainder = input % 2
+	input = input // 2	
+	answer = str(remainder) + answer
+	count += 1
 print(answer)
