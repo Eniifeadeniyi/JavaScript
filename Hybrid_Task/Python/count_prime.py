@@ -1,4 +1,5 @@
 numbers = " "
+counter = 0
 for number in range(1,101):
 	count = 0
 	for divisor in range(1, 101):
@@ -6,7 +7,8 @@ for number in range(1,101):
 			count += 1
 	if(count == 2):
 		numbers += str(number)
-print(numbers)
+		counter += 1
+print(counter)
 	
 
 
