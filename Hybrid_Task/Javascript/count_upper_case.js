@@ -2,12 +2,12 @@ let word = "EniIfE"
 
 let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-let count = 0
-for(letter in word) {
-	for(character in letters) {
-		if(letter == character)	count += 1
+
+let counter = 0
+for(let count = 0; count < word.length; count += 1) {
+	for(letter in letters) {
+		if(word.charAt(count) === letter) counter += 1
+}
 }
 
-}
-
-console.log(count)
+console.log(counter)
