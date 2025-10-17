@@ -2,9 +2,7 @@ encrypted_number = input("Enter encrypted number: ")
 
 deflation = []
 for digit in encrypted_number:
-	deflate = (int(digit) - 7) + 10
-	if deflate > 10:
-		deflate %= 10
+	deflate = ((int(digit) - 7) + 10) % 10
 	deflation.append(deflate)
 
 rearrange = []
