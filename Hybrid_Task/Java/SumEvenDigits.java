@@ -1,14 +1,17 @@
 public class SumEvenDigits {
 public static void main(String[] args) {
 
-String number = "12345";
+int input = 12345;
+String number = String.valueOf(input);
 
 int sum = 0;
 for(int count = 0; count < number.length(); count++) {
-System.out.print(sum);
-if(number.charAt(count) % 2 == 0) sum += number.charAt(count);
-
+if(number.charAt(count) % 2 == 0) {
+System.out.println(number.charAt(count));
+sum = sum + (int) number.charAt(count);
+System.out.println(sum);
 }
-System.out.print(sum);
+}
+
 }
 }
