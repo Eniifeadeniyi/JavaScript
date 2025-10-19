@@ -1,14 +1,10 @@
+for(let number = 1; number < 1001; number++) {
 let sum = 0
-
-let number = 1;
-
-while(number <= 1000) {
-if(sum == number) console.log(number)
-for(let count = 0; count < number.length; count++) {
-	let power = number.charAt(count) ** number.length;
-	sum += power;
-
+let string = String(number)
+	for(let count = 0; count <= string.length; count++) {
+		let power = string.charAt(count) ** string.length;
+		sum += power;
 }
-number++;
+if(sum == number) console.log(number)
 }
 

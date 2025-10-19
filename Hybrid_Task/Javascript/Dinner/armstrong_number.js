@@ -9,4 +9,4 @@ for(let count = 0; count < number.length; count++) {
 	sum += power;
 }
 if(sum == number) console.log(number + " is an Armstrong number!");
-if(sum != number) console.log(number + " is not a Armstrong number!");
+if(sum != number) console.log(number + " is not an Armstrong number!");
