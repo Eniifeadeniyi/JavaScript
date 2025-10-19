@@ -8,6 +8,8 @@ Scanner scanner = new Scanner(System.in);
 System.out.print("Enter a four-digit number: ");
 int number = scanner.nextInt();
 
+if(number > 9999 | number < 1000) System.out.print("Invalid input!");
+
 int[] digits = new int[4];
 int power = 1000;
 

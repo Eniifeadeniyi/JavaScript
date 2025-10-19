@@ -11,7 +11,7 @@ String num = Integer.toString(number);
 	int sum = 0;
 for(int count = 0; count < num.length(); count++) {
 	int answer = 1;
-	char digits = num.charAt(count);
+	int digits = num.charAt(count);
 	int digit = Character.getNumericValue(digits);
 	for(int counter = 1; counter <= digit; counter++) {
 		answer *= counter;

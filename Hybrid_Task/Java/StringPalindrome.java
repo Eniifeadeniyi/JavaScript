@@ -7,14 +7,17 @@ String word = "madaM".toLowerCase();
 String reverse = " ";
 
 for(int index = 0; index < word.length(); index++) {
-reverse = word.charAt(index) + reverse.toLowerCase();	
+reverse = word.charAt(index) + reverse;	
 }
 System.out.println(reverse);
 System.out.println(word);
 
-if(reverse.compareTo(word)) System.out.print(word + " is a palindrome!");
-else 
+if(reverse == word) {
+System.out.print(word + " is a palindrome!");
+}
+if(reverse != word) {
 System.out.print(word + " is not a palindrome!");
+}
 
 }
 }
