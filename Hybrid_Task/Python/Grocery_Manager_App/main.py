@@ -20,10 +20,22 @@ while operation != "4":
 				count = int(count)
 
 			if good not in list:
-				list = add_item(good,count,list)
+				print(add_item(good,count,list))
 
+			elif good in list:
+				print(update_count(good,count,list))
+
+		case "2":
+			good = input("Enter name of item: ")
+			count = input("Enter amount of " + str(good) + ": ")
+			if count.isdigit():
+				count = int(count)
+		
 			if good in list:
-				list = update_count(good,list[good],count,list)
+				print(remove_item(good,count,list))
+
+			if good not in list:
+				print(remove_invalid_item(good,count,list))
 		case "4": 
 			print("Thanks for shopping with us")
 			print("See you later,bye!!!")

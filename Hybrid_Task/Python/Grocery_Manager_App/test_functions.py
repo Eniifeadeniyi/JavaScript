@@ -10,15 +10,15 @@ class TestGroceryListManagerApp(unittest.TestCase):
 		self.assertEqual(actual,expected)
 
 	def test_that_adding_the_already_existing_item_updates_its_count(self):
-		actual = update_count("Bread",5,7,{"bread" : 5})
-		expected = {"bread" : 12}
+		actual = update_count("Bread",7,{"Bread" : 5})
+		expected = {"Bread" : 12}
 		self.assertEqual(actual,expected)
 	
 	def test_that_update_count_only_takes_positive_int(self):
-		actual = update_count("Bread",5,-2,{"bread" : 5})
+		actual = update_count("Bread",-2,{"Bread" : 5})
 		expected = "Number of item must be positive whole number digits!"
 		self.assertEqual(actual,expected)
-		actual = update_count("Bread",5,"two",{"bread" : 5})
+		actual = update_count("Bread","two",{"Bread" : 5})
 		expected = "Number of item must be positive whole number digits!"
 		self.assertEqual(actual,expected)
 
@@ -39,25 +39,25 @@ class TestGroceryListManagerApp(unittest.TestCase):
 
 	#remove_item
 	def test_that_you_can_remove_item(self):
-		actual = remove_item("Bread",8,5,{"bread" : 8})
-		expected = {"bread" : 3}
+		actual = remove_item("Bread",5,{"Bread" : 8})
+		expected = {"Bread" : 3}
 		self.assertEqual(actual,expected)
 
 	def test_that_you_can_only_remove_item_that_exists(self):
-		actual = remove_invalid_item("Water",2,{"bread": 8})
+		actual = remove_invalid_item("Water",2,{"Bread": 8})
 		expected = "Please, add item before removing!"
 		self.assertEqual(actual,expected)
 
 	def test_that_you_can_not_remove_more_than_the_amount_of_the_item(self):
-		actual = remove_item("Bread",8,9,{"bread" : 8})
+		actual = remove_item("Bread",9,{"Bread" : 8})
 		expected = "Insufficient amount of item!"
 		self.assertEqual(actual,expected)
 
 	def test_that_remove_item_only_takes_in_whole_number_digits(self):
-		actual = remove_item("Bread",9,8.2,{"bread" : 8})
+		actual = remove_item("Bread",8.2,{"Bread" : 8})
 		expected = "Number of item must be positive whole number digits!"
 		self.assertEqual(actual,expected)
-		actual = remove_item("5",6,6,{"bread" : 8})
+		actual = remove_item("5",6,{"Bread" : 8})
 		expected = "Please, enter the item, then the amount"
 		self.assertEqual(actual,expected)
 
