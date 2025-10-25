@@ -4,9 +4,9 @@ from functions import *
 class TestGroceryListManagerApp(unittest.TestCase):
 
 	#add_item
-	def test_that_add_item_exists(self):
+	def test_that_add_item_works(self):
 		actual = add_item("Bread",5)
-		expected = {"bread" : 5}
+		expected = {"Bread" : 5}
 		self.assertEqual(actual,expected)
 
 	def test_that_adding_the_already_existing_item_updates_its_count(self):

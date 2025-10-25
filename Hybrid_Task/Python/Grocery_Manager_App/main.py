@@ -13,9 +13,23 @@ while operation != "4":
 	print(menu)
 	operation = input("Enter an operation: ")
 	match operation:
+		case "1" :
+			good = input("Enter name of item: ")
+			count = input("Enter amount of " + str(good) + " needed: ")
+			if count.isdigit():
+				count = int(count)
+
+			if good not in list:
+				list = add_item(good,count,list)
+
+			if good in list:
+				list = update_count(good,list[good],count,list)
 		case "4": 
 			print("Thanks for shopping with us")
 			print("See you later,bye!!!")
-		case "3" : show(list)
+		case "3" : 
+			if list == {}:
+				print("No items available yet!")
+			for key,value in list.items():
+				print(f"{key} : {value}")
 		case _: print("Please, enter a number from the options below: ")
-	
