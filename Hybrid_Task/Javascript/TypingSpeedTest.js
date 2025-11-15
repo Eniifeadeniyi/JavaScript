@@ -48,4 +48,4 @@ let numberOfWords = userInput.length;
 
 console.log("You spent " + totalTime + " seconds!");
 console.log("Your typing speed is "+ calculateWordsPerMinute(totalTime,numberOfWords) + "wpm");
-console.log("Your typing accuracy is " + calculateAccuracy(scorePerWord,userInput,expectedWords));
+console.log("Your typing accuracy is " + calculateAccuracy(scorePerWord,userInput,expectedWords) + "%");
