@@ -3,8 +3,7 @@ public class Functions {
 public static int calculateTimeSpent(int start,int end) {
 	return end - start;
 }
-
-
+	
 public static double calculateWordsPerMinute(int time,int numberOfWords) {
 	double minutes = time / 60;
 	double speed = numberOfWords / minutes;

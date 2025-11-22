@@ -29,7 +29,7 @@ while(!operation.equals("4")) {
 			String item = input.nextLine();
 			System.out.print("Enter amount: ");
 			int amount = input.nextInt();
-			System.out.print(function.addItem(item,amount,cart));}
+			System.out.println(function.addItem(item,amount,cart));}
 
 		default -> {
 			System.out.print("Please enter a number from below: ");}
@@ -37,6 +37,11 @@ while(!operation.equals("4")) {
 		case "4" -> {
 			System.out.println("Thanks for shopping with us");
 			System.out.print("See you later,bye!!!");}
+
+		case "3" -> {
+			for(ArrayList list : cart){
+				System.out.println(list);}
+				}
 			}
 	}
 

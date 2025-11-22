@@ -12,9 +12,9 @@ public class FunctionsTest {
 	@Test
 	public void testThatYouCanAddAnItem() {
 	ArrayList<ArrayList> cart = new ArrayList<>();
-	ArrayList actual = function.addItem("Potato",10,cart);
-	ArrayList expected = [[Potato], [10]];
-	assertEquals(result, expected);
+	String actual = function.addItem("Potato",10,cart);
+
+	assertEquals(result, "Item added successfully!");
 	
 	}
 
