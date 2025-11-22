@@ -8,6 +8,7 @@ System.out.print("Enter your car's fuel efficiency: ");
 while(!input.hasNextDouble()) {
 	System.out.println("Invalid input!");
 	System.out.print("Enter your car's fuel efficiency: ");
+	input.nextLine();
 }
 Double fuelEfficiency = input.nextDouble();
 if(fuelEfficiency > 0) {
@@ -28,7 +29,7 @@ while(!operation.equals("5")) {
 	operation = input.next();
 	switch(operation) {
 		case "1" -> {
-			car.startCar("yes");
+			car.startCar();
 			if(car.getStartCar() == true) System.out.print("On");}
 
 		case "2" -> {
@@ -54,7 +55,7 @@ while(!operation.equals("5")) {
 			car.addToFuel(fuelAmount);	
 			}
 
-		case "5" -> car.startCar("no");
+		case "5" -> car.stopCar();
 
 		default -> System.out.println("Invalid input!");	
 			

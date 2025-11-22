@@ -12,12 +12,16 @@ public Car(double fuelEfficiency) {
 }
 
 
-public void startCar(String choice) {
-	if(choice.equalsIgnoreCase("yes")) this.start = true;
+public void startCar() {
+	this.start = true;
 }
 
 public boolean getStartCar() {
 	return start;
+}
+
+public void stopCar() {
+	this.start = false;
 }
 
 
