@@ -29,7 +29,7 @@ def remove_item(item,deduct,list = {}):
 	return "Please, enter the item, then the amount"
 	
 
-def remove_invalid_item(item,count,list = {}):
+def remove_invalid_item(item,deduct,list = {}):
 	return "Please, add item before removing!"
 
 
