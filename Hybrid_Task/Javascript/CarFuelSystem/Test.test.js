@@ -1,5 +1,5 @@
 const add = require("./Functions");
-test("Test to add three numbers", () => {
+test("Test that distance changed", () => {
     moveCar(50)
     expect(getDistanceMoved()).toBe(50);
 
