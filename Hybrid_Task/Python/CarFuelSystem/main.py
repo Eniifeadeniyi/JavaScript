@@ -7,7 +7,7 @@ while not efficiency.isdigit() or not efficiency.isdecimal():
 
 efficiency = float(efficiency)
 maximum = set_maximum_distance(efficiency)
-
+distance_moved = 0.0
 start = False
 total_fuel = 0.0
 
@@ -41,7 +41,7 @@ while operation != "5":
                     print("Invalid input")
                     distance = input("Enter distance: ")
                 distance = float(distance)
-                distance_moved, total_fuel = move_car(distance, maximum, total_fuel, efficiency)
+                distance_moved, total_fuel = move_car(distance, maximum, total_fuel, efficiency,distance_moved)
                 print("Moved " + str(distance) + " kilometers")
                 print("Moved a total of " + str(distance_moved) + " kilometers")
             else:
