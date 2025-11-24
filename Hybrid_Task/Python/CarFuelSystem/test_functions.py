@@ -2,9 +2,7 @@ import unittest
 from functions import *
 
 class Test_Functions(unittest.TestCase):
-    def test_that_check_start_works(self):
-        start_car()
-        self.assertEqual(check_start(), True)
-        stop_car()
-        self.assertEqual(check_start(), False)
+	def test_that_start_car_works(self):
+		self.assertEqual(start_car(), True)
+	
 

@@ -6,8 +6,10 @@ while not efficiency.isdigit() or not efficiency.isdecimal():
     efficiency = input("Enter fuel efficiency: ")
 
 efficiency = float(efficiency)
-set_fuel_efficiency(efficiency)
-set_maximum_distance()
+maximum = set_maximum_distance(efficiency)
+
+start = False
+total_fuel = 0.0
 
 menu = """
     1. Start Car
@@ -22,30 +24,30 @@ while operation != "5":
     operation = input("Enter your choice: ")
     match operation:
         case "1":
-            start_car()
+            start = start_car()
         case "2":
-            print(check_fuel_level())
+            print(add_fuel(total_fuel))
         case "3":
             fuel = input("Enter fuel amount: ")
             while not fuel.isdigit() or not fuel.isdecimal():
                 print("Invalid input")
                 fuel = input("Enter fuel amount: ")
             fuel = float(fuel)
-            add_fuel(fuel)
+            total_fuel = add_fuel(total_fuel,fuel)
         case "4":
-            if check_fuel_level() > 0.0 and check_start() == True:
+            if total_fuel > 0.0 and start == True:
                 distance = input("Enter distance: ")
                 while not distance.isdecimal() or not distance.isdigit():
                     print("Invalid input")
                     distance = input("Enter distance: ")
                 distance = float(distance)
-                move_car(distance)
+                distance_moved, total_fuel = move_car(distance, maximum, total_fuel, efficiency)
                 print("Moved " + str(distance) + " kilometers")
-                print("Moved a total of " + str(get_distance_moved()) + " kilometers")
+                print("Moved a total of " + str(distance_moved) + " kilometers")
             else:
                 print("Start car and add fuel first!")
         case "5":
-            stop_car()
+            start = stop_car()
         case _:
             print("Invalid input")
 
