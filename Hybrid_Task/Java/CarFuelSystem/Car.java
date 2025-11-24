@@ -26,7 +26,7 @@ public void stopCar() {
 
 
 public void addToFuel(double fuel) {
-	if(this.fuelLevel < 50.1) {
+	if(this.fuelLevel < 50.1 && this.fuelLevel + fuel < 50.1) {
 		if(fuel > 0 && fuel < 50.1) this.fuelLevel += fuel;}
 }
 

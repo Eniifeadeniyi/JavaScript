@@ -50,5 +50,13 @@ public class TestFunctions {
 
 }
 
+	@Test
+	public void testThatFuelCantPassFifty(){
+		Car car = new Car(20);
+		car.addToFuel(47.5);
+		car.addToFuel(4);
+		assertEquals(car.getCurrentFuelLevel(), 47.5);
+}
+
 }
 

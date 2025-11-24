@@ -30,7 +30,7 @@ while(!operation.equals("5")) {
 	switch(operation) {
 		case "1" -> {
 			car.startCar();
-			if(car.getStartCar() == true) System.out.print("On");}
+			if(car.getStartCar() == true) System.out.println("On");}
 
 		case "2" -> {
 			if(car.getStartCar() == true && car.getCurrentFuelLevel() != 0) {
@@ -40,7 +40,7 @@ while(!operation.equals("5")) {
 					System.out.print("How far are you going?: ");}
 				double distance = input.nextDouble();
 				car.moveCar(distance);
-				System.out.print("Distance moved: " + car.getDistance());}
+				System.out.println("Distance moved: " + car.getDistance());}
 			else System.out.println("Switch on the car first and add fuel!");
 			}
 
@@ -55,7 +55,9 @@ while(!operation.equals("5")) {
 			car.addToFuel(fuelAmount);	
 			}
 
-		case "5" -> car.stopCar();
+		case "5" -> {
+			car.stopCar();
+			System.out.print("Off");}
 
 		default -> System.out.println("Invalid input!");	
 			
