@@ -30,6 +30,9 @@ def add_fuel(fuel):
     if current_fuel < 50.1 and fuel > 0 and fuel < 50.1:
         current_fuel += fuel
 
+def check_fuel():
+    return current_fuel
+
 def move_car(distance):
     if distance > 0 and distance <= maximum_distance:
         distance_moved += distance
