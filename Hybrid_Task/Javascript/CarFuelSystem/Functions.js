@@ -30,7 +30,7 @@ function stopCar(){
 }
 
 function addFuel(fuel) {
-    if(currentFuel < 50.1 && fuel > 0 && fuel < 50.1) currentFuel += fuel;
+    if(currentFuel < 50.1 && fuel > 0 && fuel < 50.1 && currentFuel + fuel < 50.1) currentFuel += fuel;
 }
 
 function checkFuelLevel(){
