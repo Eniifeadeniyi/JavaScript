@@ -26,3 +26,6 @@ class Test_Functions(unittest.TestCase):
 	def test_that_move_car_works(self):
 		self.assertEqual(move_car(50,1000,50,20,0), (50,47.5))
 
+	def test_that_move_car_doesnt_take_invalid_input(self):
+		self.assertEqual(move_car(-50,1000,50,20,0), (0,50))
+
