@@ -43,7 +43,7 @@ while operation != "5":
                 distance = float(distance)
                 distance_moved, total_fuel = move_car(distance, maximum, total_fuel, efficiency,distance_moved)
                 print("Moved " + str(distance) + " kilometers")
-                print("Moved a total of " + str(distance_moved) + " kilometers")
+                print("Moved a total of " + str(distance_moved) + " kilometers successfully")
             else:
                 print("Start car and add fuel first!")
         case "5":

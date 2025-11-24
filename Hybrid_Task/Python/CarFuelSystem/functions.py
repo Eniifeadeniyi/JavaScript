@@ -15,7 +15,7 @@ def add_fuel(current_fuel = 0.0, fuel = 0.0):
         current_fuel += fuel
     return current_fuel
 
-def move_car(distance,maximum_distance,current_fuel,fuel_efficiency,distance_moved = 0.0):
+def move_car(distance,maximum_distance,current_fuel,fuel_efficiency,   distance_moved):
     if distance > 0 and distance <= maximum_distance:
         distance_moved += distance
         fuel_used = distance / fuel_efficiency
