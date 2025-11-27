@@ -18,7 +18,7 @@ public class TestBike {
 
     @Test
     public void testThatBikeCanTurnOff(){
-        okada.turnOn()
+        okada.turnOn();
         okada.turnOff();
         assertEquals(okada.getIsOn(),false);
     }
@@ -52,14 +52,18 @@ public class TestBike {
     @Test 
     public void testThatGearAutomaticallyChangesAsSpeedChangesRange(){
         okada.turnOn();
-        for(int count = 0; count < 25; count++) { okada.accelerate(); }
+        for(int count = 0; count < 25; count++) { 
+            okada.accelerate(); 
+        }
         assertEquals(okada.getGear(),2);
     }
 
     @Test 
     public void testThatGearAutomaticallyChangesAsSpeedReducesInRange(){
         okada.turnOn();
-        for(int count = 0; count < 21; count++) { okada.accelerate(); }
+        for(int count = 0; count < 21; count++) { 
+            okada.accelerate(); 
+        }
         int firstGear = okada.getGear();
         okada.decelerate();
         int secondGear = okada.getGear();
