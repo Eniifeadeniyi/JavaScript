@@ -1,9 +1,13 @@
-const {turnOff,turnOn,changeGear,accelerate,decelerate,reset} = require("./Functions")
+const {turnOff,turnOn,accelerate,decelerate,reset} = require("./Functions")
     let bike = {
         "isOn" : false,
         "speed" : 0,
         "gear" : 1,
     }
+
+    beforeEach(() => {
+        reset(bike);
+    })
     
 test("Test that bike can be turned on", () => {
     turnOn(bike);
@@ -12,27 +16,27 @@ test("Test that bike can be turned on", () => {
 })
 
 test("Test that bike can be turned off", () => {
-    reset(bike);
+    //reset(bike);
     turnOn(bike);
     turnOff(bike);
     expect(bike.isOn).toBe(false);
 })
 
 test("Test that bike can accelerate", () => {
-    reset(bike);
+    //reset(bike);
     turnOn(bike);
     accelerate(bike);
     expect(bike.speed).toBe(1);
 })
 
 test("Test that bike only accelerates if on", () => {
-    reset(bike);
+    //reset(bike);
     accelerate(bike);
     expect(bike.speed).toBe(0);
 })
 
 test("Test that bike can decelerate", () => {
-    reset(bike);
+    //reset(bike);
     turnOn(bike);
     accelerate(bike);
     accelerate(bike);
@@ -41,7 +45,7 @@ test("Test that bike can decelerate", () => {
 })
 
 test("Test that bike doesn't decelerate if off", () => {
-    reset(bike);
+    //reset(bike);
     turnOn(bike);
     accelerate(bike);
     turnOff(bike);
@@ -50,14 +54,14 @@ test("Test that bike doesn't decelerate if off", () => {
 })
 
 test("Test that bike can't decelerate if speed is 0", () => {
-    reset(bike);
+    //reset(bike);
     turnOn(bike);
     decelerate(bike);
     expect(bike.speed).toBe(0);
 })
 
 test("Test that gear automatically changes as speed increases and changes range", () => {
-    reset(bike);
+    //reset(bike);
     turnOn(bike);
     for(let count = 0; count < 25; count++) {
         accelerate(bike);
@@ -66,7 +70,7 @@ test("Test that gear automatically changes as speed increases and changes range"
 })
 
 test("Test that gear automatically changes as speed reduces and range changes", () => {
-    reset(bike);
+    //reset(bike);
     turnOn(bike);
     for(let count = 0; count < 21; count++) {
         accelerate(bike);

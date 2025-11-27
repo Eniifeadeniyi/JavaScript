@@ -47,8 +47,5 @@ function changeGear(bike){
     else bike.gear = 4;
 }
 
-function showGear(bike){
-    return bike.gear;
-}
 
-module.exports = {turnOff,turnOn,changeGear,accelerate,decelerate,showGear,reset} 
+module.exports = {turnOff,turnOn,accelerate,decelerate,reset} 
