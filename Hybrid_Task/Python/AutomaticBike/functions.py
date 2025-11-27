@@ -1,46 +1,53 @@
+bike = {
+    "is_on": False,
+    "gear": 1,
+    "speed": 0,
+}
+
+def reset():
+    bike["is_on"] = False;
+    bike["gear"] = 0
+    bike["speed"] = 0
+
 def turn_on():
-    return True
+    bike["is_on"] = True
 
 def turn_off():
-    return False
+    bike["is_on"] = False
 
-
-def change_gear(speed):
-    if speed > -1 and speed < 21:
-        gear = 1
-    elif speed > 20 and speed < 31:
-        gear = 2
-    elif speed > 30 and speed < 41:
-        gear = 3
+def change_gear():
+    if bike["speed"] > -1 and bike["speed"] < 21:
+        bike["gear"] = 1
+    elif bike["speed"] > 20 and bike["speed"] < 31:
+        bike["gear"] = 2
+    elif bike["speed"] > 30 and bike["speed"] < 41:
+        bike["gear"] = 3
     else:
-        gear = 4
-    return gear
+        bike["gear"] = 4
 
 
-def accelerate(speed):
-    if turn_on():
-        gear = change_gear(speed)
-        if gear == 1:
-            speed += 1
-        elif gear == 2 :
-            speed += 2
-        elif gear == 3:
-            speed += 3
-        elif gear == 4:
-            speed += 4
-        gear = change_gear(speed)
-    return gear
+def accelerate():
+    if bike["is_on"] == True:
+        change_gear()
+        if bike["gear"] == 1:
+            bike["speed"] += 1
+        elif bike["gear"] == 2 :
+            bike["speed"] += 2
+        elif bike["gear"] == 3:
+            bike["speed"] += 3
+        elif bike["gear"] == 4:
+            bike["speed"] += 4
+        change_gear()
 
-def decelerate(speed):
-    if turn_on() and speed > 0:
-        gear = change_gear(speed)
-        if gear == 1:
-            speed -= 1
-        elif gear == 2 :
-            speed -= 2
-        elif gear == 3:
-            speed -= 3
-        elif gear == 4:
-            speed -= 4
-        gear = change_gear(speed)
-    return gear
+def decelerate():
+    if bike["is_on"] == True and bike["speed"] > 0:
+        change_gear()
+        if bike["gear"] == 1:
+            bike["speed"] -= 1
+        elif bike["gear"] == 2 :
+            bike["speed"] -= 2
+        elif bike["gear"] == 3:
+            bike["speed"] -= 3
+        elif bike["gear"] == 4:
+            bike["speed"] -= 4
+        change_gear()
