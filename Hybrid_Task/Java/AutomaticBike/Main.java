@@ -30,6 +30,7 @@ public class Main {
                     else {
                         motorBike.accelerate();
                         System.out.println("Gear : " + motorBike.getGear());
+                        System.out.println("Speed : " + motorBike.getSpeed());
                     }
                 }
                 case "4" -> {
@@ -37,6 +38,7 @@ public class Main {
                     else {
                         motorBike.decelerate();
                         System.out.println("Gear : " + motorBike.getGear());
+                        System.out.println("Speed : " + motorBike.getSpeed());
                     }
                 }
                 case "5" -> {
