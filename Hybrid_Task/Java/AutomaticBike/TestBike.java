@@ -18,6 +18,7 @@ public class TestBike {
 
     @Test
     public void testThatBikeCanTurnOff(){
+        okada.turnOn()
         okada.turnOff();
         assertEquals(okada.getIsOn(),false);
     }
