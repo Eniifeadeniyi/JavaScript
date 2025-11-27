@@ -17,15 +17,27 @@ public class Main {
             System.out.print("Enter a number from above: ");
             choice = input.next();
             switch(choice){
-                case "1" -> motorBike.turnOn();
-                case "2" -> motorBike.turnOff();
+                case "1" -> {
+                    if(motorBike.getIsOn() == false) motorBike.turnOn();
+                    else System.out.println("Bike already on!");
+                }
+                case "2" ->{
+                    if(motorBike.getIsOn() == false) System.out.println("Bike already off!");
+                    else motorBike.turnOff();
+                } 
                 case "3" -> {
-                    motorBike.accelerate();
-                    System.out.println(motorBike.getGear());
+                    if(motorBike.getIsOn() == false) System.out.println("Bike is off!");
+                    else {
+                        motorBike.accelerate();
+                        System.out.println("Gear : " + motorBike.getGear());
+                    }
                 }
                 case "4" -> {
-                    motorBike.decelerate();
-                    System.out.println(motorBike.getGear());
+                    if(motorBike.getIsOn() == false) System.out.println("Bike is off!");
+                    else {
+                        motorBike.decelerate();
+                        System.out.println("Gear : " + motorBike.getGear());
+                    }
                 }
                 case "5" -> {
                     if(motorBike.getIsOn() == false){
